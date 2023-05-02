@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Investment</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+{% block content %}
+  <nav class="row" style="background: grey; color: white;">
+    <div align="center"><h1 class="col-md-3 text-center">Investment</h1></div>
+  </nav>
+  <br />
+  <br />
+  <center class="row">
+    <form action="" method="post" class="col-md-6 col-md-offset-3">
+      {% csrf_token %}
+      <div class="input-group">
+        <input type="text" class="form-control" name="symbol" placeholder="Search">
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="submit">ClickMe</button>
+        </div>
+        <form>
+  </center>
+  <div class="row">
+    {% if data.lastSalePrice %}
+    <div class="col-md-6 col-md-offset-3">
+      <h5>Symbol: {{symbol1}}</h5>
+      <h5>Price : {{data.lastSalePrice}}</h5>
+    </div>
+    {% endif %}
+  </div>
+
+
+
+ {% endblock %}
+</body>
+
+</html>

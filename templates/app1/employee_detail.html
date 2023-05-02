@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>{{ object.first_name }} {{object.last_name}}</h1>
+<p>{{ object.email }}</p>
+<p>{{ object.mobile }}</p>
+ <td><button><a href = '/4/r/{{object.pk}}/d' class = 'class="btn text-secondary px-0'> Delete
+</a></button></td>
+ <td><button><a href = '/4/r/{{object.pk}}/u' class = 'class="btn text-secondary px-0'> Update
+</a></button></td>
+{% endblock content %}
